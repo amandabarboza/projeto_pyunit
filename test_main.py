@@ -9,17 +9,17 @@ class TestProduct(unittest.TestCase):
         self.assertTrue(is_dataclass(Product))
         
     def setUp(self):
-        self.product = Product(1, 'test', 1.0, 10)
+        self.product = Product(30, 'Teste', 2.0, 20)
     
     def test_constructor(self):
-        self.assertEqual(self.product.id, 1)
+        self.assertEqual(self.product.id, 30)
         self.assertEqual(self.product.name, 'test')
-        self.assertEqual(self.product.price, 1.0)
-        self.assertEqual(self.product.stock, 10)
+        self.assertEqual(self.product.price, 2.0)
+        self.assertEqual(self.product.stock, 20)
         
     def test_increase_stock(self):
         self.product.increase_stock(10)
-        self.assertEqual(self.product.stock, 20)
+        self.assertEqual(self.product.stock, 30)
         
     def test_decrease_stock(self):
         self.product.decrease_stock(10)
