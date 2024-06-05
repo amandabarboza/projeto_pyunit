@@ -3,7 +3,7 @@ from dataclasses import dataclass
 @dataclass()
 class Product:
 
-    # variaveis
+    # atributos
     id: int
     name: str
     price: float
